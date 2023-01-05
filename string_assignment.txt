@@ -1,0 +1,36 @@
+
+
+Test Example by creatng Class named Tester--Main class
+
+StringUtil{
+
+//Find all the vowels in string and convert into ‘b’ in all the vowels and should return on StringBuilder.
+
+StringBuilder convertTo(String input)
+
+//Check if the string is an panagram ie. Contains all 26 alphabets 
+
+boolean  isPanagram(String input)
+
+
+//count of unique letters which are not vowels occuring in string
+uniqueConsonants(String input)
+
+
+
+
+//4156789657893
+
+//length should be 13 or 16
+// Should not contain any alphabet
+//First letter should start from 4
+//if 13 length, then all letters should be numbers(1-9)
+
+//if 16 length,  then first thirteen letters should be numbers(1-9)
+then last 3 digits will be numbers (2-6)
+public boolean validateCreditCard(String input)
+
+}
+
+
+
