@@ -10,6 +10,9 @@ import com.trainingprojects.projectapp.empms.repository.IEmployeeRepository;
 
 import java.util.Optional;
 
+/**
+ * Service implementation containing business logic for employee management module
+ */
 public class EmployeeServiceImpl implements IEmployeeService {
 
     private IEmployeeRepository employeeRepo = new EmployeeRepositoryImpl();
@@ -20,6 +23,14 @@ public class EmployeeServiceImpl implements IEmployeeService {
         return ++generatedId;
     }
 
+
+    /**
+     *  registers new employee
+     *
+     * @param request request data
+     * @return employee details response object
+     * @throws InvalidArgumentException if input is invalid
+     */
 
     @Override
     public EmployeeDetails registerEmployee(CreateEmployeeRequest request) throws InvalidArgumentException {
@@ -41,6 +52,14 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
     }
 
+    /**
+     *  fetching employee and return its details as EmployeeDetails resposne object
+     *
+     * @param employeeId
+     * @return EmployeeDetails response object
+     * @throws InvalidArgumentException if id is not valid
+     * @throws EmployeeNotFoundException if employee is not found in store
+     */
     @Override
     public EmployeeDetails findDetailsById(long employeeId) throws InvalidArgumentException,EmployeeNotFoundException {
         validateId(employeeId);
